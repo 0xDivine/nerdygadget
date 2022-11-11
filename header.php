@@ -24,9 +24,28 @@ $databaseConnection = connectToDatabase();
 <body>
 <div class="Background">
     <div class="row" id="Header">
+<<<<<<< HEAD
         <div class="col-2"><a href="./" id="LogoA">
                 <div id="LogoImage"></div>
             </a></div>
+=======
+        <div class="background">
+
+            <style>
+                .background {
+                    background-image: url("Public/ProductIMGHighRes/NerdyGadgetsLogo.png");
+                    background-size: 150px;
+                    width: 135px;
+                    height: 120px;
+                    margin: auto 100px;
+                    float: left;
+
+
+                }
+            </style>
+
+            </div>
+>>>>>>> 0c4fdd458afe207f781ab821ada1c81f1f553c1d
         <div class="col-8" id="CategoriesBar">
             <ul id="ul-class">
                 <?php
@@ -49,6 +68,10 @@ $databaseConnection = connectToDatabase();
 <!-- code voor US3: zoeken -->
 <ul id="ul-class-navigation">
             <li>
+<<<<<<< HEAD
+=======
+                <a href="cart.php" class="HrefDecoration"><i class="fas fa-shopping-cart"></i> Winkelwagen bekijken</a>
+>>>>>>> 0c4fdd458afe207f781ab821ada1c81f1f553c1d
                 <a href="browse.php" class="HrefDecoration"><i class="fas fa-search search"></i> Zoeken</a>
             </li>
         </ul>

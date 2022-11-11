@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/nerdygadgets.iml" filepath="$PROJECT_DIR$/.idea/nerdygadgets.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/nerdygadget-Test_IN.iml" filepath="$PROJECT_DIR$/.idea/nerdygadget-Test_IN.iml" />
+>>>>>>> 0c4fdd458afe207f781ab821ada1c81f1f553c1d
     </modules>
   </component>
 </project>
