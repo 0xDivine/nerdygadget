@@ -1,10 +1,7 @@
 <!-- dit bestand bevat alle code voor de pagina die één product laat zien -->
 <?php
 include __DIR__ . "/header.php";
-<<<<<<< HEAD
-=======
 include "cartfuncties.php";
->>>>>>> 0c4fdd458afe207f781ab821ada1c81f1f553c1d
 
 $StockItem = getStockItem($_GET['id'], $databaseConnection);
 $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
@@ -75,21 +72,18 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
             }
             ?>
 
-<<<<<<< HEAD
-=======
             <?php
             if([$_POST]){
 
                 $fetchedid = $_GET["id"];
-                 $cart = getCart();
-                 addProductToCart($fetchedid);
-                 #print_r($cart);
+                $cart = getCart();
+                addProductToCart($fetchedid);
+                #print_r($cart);
 
 
 
             }
             ?>
->>>>>>> 0c4fdd458afe207f781ab821ada1c81f1f553c1d
 
             <h1 class="StockItemID">Artikelnummer: <?php print $StockItem["StockItemID"]; ?></h1>
             <h2 class="StockItemNameViewSize StockItemName">
@@ -110,14 +104,11 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
             <h3>Artikel beschrijving</h3>
             <p><?php print $StockItem['SearchDetails']; ?></p>
         </div>
-<<<<<<< HEAD
-=======
         <div class="addtocartcontainer">
 
 
 
         </div>
->>>>>>> 0c4fdd458afe207f781ab821ada1c81f1f553c1d
         <div id="StockItemSpecifications">
             <h3>Artikel specificaties</h3>
             <?php
@@ -154,9 +145,6 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
                 <?php
             }
             ?>
-<<<<<<< HEAD
-        </div>
-=======
 
         </div>
         <br>
@@ -167,7 +155,6 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
 
 
         </form>
->>>>>>> 0c4fdd458afe207f781ab821ada1c81f1f553c1d
         <?php
     } else {
         ?><h2 id="ProductNotFound">Het opgevraagde product is niet gevonden.</h2><?php
