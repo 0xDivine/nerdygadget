@@ -78,7 +78,7 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
                 $fetchedid = $_GET["id"];
                  $cart = getCart();
                  addProductToCart($fetchedid);
-                 print_r($cart);
+                 #print_r($cart);
 
 
 
@@ -105,12 +105,8 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
             <p><?php print $StockItem['SearchDetails']; ?></p>
         </div>
         <div class="addtocartcontainer">
-            <form method="post">
-                <button type="submit">Voeg toe aan winkelmand</button>
 
 
-
-            </form>
 
         </div>
         <div id="StockItemSpecifications">
@@ -149,7 +145,16 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
                 <?php
             }
             ?>
+
         </div>
+        <br>
+        <br>
+        <form method="post">
+            <button class="btn btn-primary btn-lg btn-block">Toevoegen aan winkelmand</button>
+
+
+
+        </form>
         <?php
     } else {
         ?><h2 id="ProductNotFound">Het opgevraagde product is niet gevonden.</h2><?php

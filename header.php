@@ -24,8 +24,20 @@ $databaseConnection = connectToDatabase();
 <body>
 <div class="Background">
     <div class="row" id="Header">
-        <div class="col-2 logoo">
-                <i class="fas fa-microchip"></i>
+        <div class="background">
+
+            <style>
+                .background {
+                    background-image: url("Public/ProductIMGHighRes/NerdyGadgetsLogo.png");
+                    background-size: 150px;
+                    width: 135px;
+                    height: 120px;
+                    margin: auto 100px;
+                    float: left;
+
+
+                }
+            </style>
 
             </div>
         <div class="col-8" id="CategoriesBar">
