@@ -26,7 +26,7 @@ include "header.php";
 <?php
 $cart = getCart();
 $toberemoved = 0;
-$tellen = 0;
+$totalprice = 0;
 foreach($cart as $productid => $quantity){
 
     $b = getStockItem($productid, $databaseConnection);
@@ -37,8 +37,7 @@ foreach($cart as $productid => $quantity){
     $image = $b["BackupImagePath"];
     $toberemoved = $toberemoved + $b["StockItemID"];
     $quantity = $quantity - 1;
-    $peritem = round($item_price*$quantity);
-    $tellen = $tellen + 1;
+    $totalprice = $totalprice + $item_price;
 
 ?>
 
@@ -66,7 +65,7 @@ foreach($cart as $productid => $quantity){
 </table>
  <?php #print_r($b); ?>
 
-<h3>Totaal: <?php echo "€ ".round($peritem*$tellen-0.05,2);?></h3>
+<h3>Totaal: <?php echo "€ ".round($totalprice,2);?></h3>
 <form action="./ordersuccess.php">
 
     <button class="btn btn-success">Afrekenen</button>
