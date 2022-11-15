@@ -21,6 +21,7 @@ include "header.php";
         <th></th>
         <th></th>
         <th>Prijs</th>
+        <th>Verwijder</th>
     </tr>
 
 <?php
@@ -57,6 +58,22 @@ foreach($cart as $productid => $quantity){
             </td>
     <td></td>
     <td><?php echo "€ ".round($item_price,2); ?></td>
+    <td>
+            <form action="cart.php?id=<?php echo $item_id?>" method="POST">
+            <button type="submit" class="btn btn-danger" name="del"><i class="fa fa-trash" aria-hidden="true"></i>
+              <!-- <a href='cart.php?id=<?php echo $item_id; ?>'>Remove</a> --!>
+                <?php
+
+                if(isset($_POST['del'])){
+                    $cart = getCart();
+                    $b = $_GET["id"];
+                    unset($cart[$b]);
+                    $_SESSION["cart"] = $cart;
+                }
+                ?>
+        </button>
+        </form>
+    </td>
 
 </tr>
 
@@ -66,9 +83,11 @@ foreach($cart as $productid => $quantity){
  <?php #print_r($b); ?>
 
 <h3>Totaal: <?php echo "€ ".round($totalprice,2);?></h3>
-<form action="./ordersuccess.php">
+<form action="./ordersuccess.php" method="post">
 
-    <button class="btn btn-success">Afrekenen</button>
+    <button name="afrekenen" class="btn btn-success">Afrekenen</button>
+
+
 
 </form>
 

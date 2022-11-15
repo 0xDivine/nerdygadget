@@ -73,15 +73,20 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
             ?>
 
             <?php
-            if([$_POST]){
+            if([$_POST]) {
 
                 $fetchedid = $_GET["id"];
                 $cart = getCart();
                 addProductToCart($fetchedid);
                 #print_r($cart);
+            }
+                ?>
+                    <?php
+                    if(isset($_POST["mand"])){
+                        ?>
+                <script>alert("Het Product is toegevoegd aan je winkelmand")</script>
 
-
-
+            <?php
             }
             ?>
 
@@ -150,9 +155,7 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
         <br>
         <br>
         <form method="post">
-            <button class="btn btn-primary btn-lg btn-block">Toevoegen aan winkelmand</button>
-
-
+            <button class="btn btn-primary btn-lg btn-block" name="mand">Toevoegen aan winkelmand</button>
 
         </form>
         <?php
