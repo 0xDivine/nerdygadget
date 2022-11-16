@@ -24,7 +24,7 @@ $databaseConnection = connectToDatabase();
 <body>
 <div class="Background">
     <div class="row" id="Header">
-            </a>
+
 
         <div class="background">
 
@@ -40,6 +40,7 @@ $databaseConnection = connectToDatabase();
 
                 }
             </style>
+
 
             </div>
 

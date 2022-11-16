@@ -98,8 +98,19 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
             <div id="StockItemHeaderLeft">
                 <div class="CenterPriceLeft">
                     <div class="CenterPriceLeftChild">
+                        <br>
+                        <br>
                         <p class="StockItemPriceText"><b><?php print sprintf("€ %.2f", $StockItem['SellPrice']); ?></b></p>
                         <h6> Inclusief BTW </h6>
+                        <form method="post">
+                            <br>
+                            <button class="btn btn-primary btn-lg btn-block" name="mand">Toevoegen aan winkelmand</button>
+
+                        </form>
+                        <?php
+                        } else {
+                            ?><h2 id="ProductNotFound">Het opgevraagde product is niet gevonden.</h2><?php
+                        } ?>
                     </div>
                 </div>
             </div>
@@ -154,12 +165,5 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
         </div>
         <br>
         <br>
-        <form method="post">
-            <button class="btn btn-primary btn-lg btn-block" name="mand">Toevoegen aan winkelmand</button>
 
-        </form>
-        <?php
-    } else {
-        ?><h2 id="ProductNotFound">Het opgevraagde product is niet gevonden.</h2><?php
-    } ?>
 </div>

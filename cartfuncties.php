@@ -30,3 +30,13 @@ function addProductToCart($stockItemID)
     saveCart($cart);                            // werk de "gedeelde" $_SESSION["cart"] bij met de bijgewerkte cart
 }
 
+function space(){
+    $var = "&nbsp;";
+    for($x=0;$x<=150;$x++){
+        print($var);
+    }
+    return $var;
+
+
+}
+

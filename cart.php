@@ -12,6 +12,7 @@ include "header.php";
 </head>
 <body>
 <h1>Inhoud Winkelwagen</h1>
+
 <br>
 
 <table>
@@ -23,11 +24,16 @@ include "header.php";
         <th>Prijs</th>
         <th>Verwijder</th>
     </tr>
+    <p><?php space(); ?>
+    <a class="btn btn-danger" href="browse.php" role="button">X</a>
+    </p>
 
-<?php
+    <?php
 $cart = getCart();
-$toberemoved = 0;
 $totalprice = 0;
+
+
+
 foreach($cart as $productid => $quantity){
 
     $b = getStockItem($productid, $databaseConnection);
@@ -36,9 +42,12 @@ foreach($cart as $productid => $quantity){
     $item_id = $b["StockItemID"];
     $item_price = $b["SellPrice"];
     $image = $b["BackupImagePath"];
-    $toberemoved = $toberemoved + $b["StockItemID"];
     $quantity = $quantity - 1;
     $totalprice = $totalprice + $item_price;
+    $voorraad = $b["QuantityOnHand"];
+
+
+
 
 ?>
 
@@ -70,6 +79,7 @@ foreach($cart as $productid => $quantity){
                     unset($cart[$b]);
                     $_SESSION["cart"] = $cart;
                 }
+                $totalprice = $totalprice*$quantity;
                 ?>
         </button>
         </form>
