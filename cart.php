@@ -43,7 +43,8 @@ foreach($cart as $productid => $quantity){
     $item_price = $b["SellPrice"];
     $image = $b["BackupImagePath"];
     $quantity = $quantity - 1;
-    $totalprice = $totalprice + $item_price;
+    $priceperitem = $item_price*$quantity;
+    $totalprice = $totalprice + $priceperitem;
     $voorraad = $b["QuantityOnHand"];
 
 
@@ -79,7 +80,7 @@ foreach($cart as $productid => $quantity){
                     unset($cart[$b]);
                     $_SESSION["cart"] = $cart;
                 }
-                $totalprice = $totalprice*$quantity;
+
                 ?>
         </button>
         </form>
