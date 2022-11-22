@@ -11,7 +11,7 @@ include "header.php";
     <title>Winkelwagen</title>
 </head>
 <body>
-<h1>Inhoud Winkelwagen</h1>
+<h1></h1>
 
 <br>
 

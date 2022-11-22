@@ -67,7 +67,7 @@ $databaseConnection = connectToDatabase();
 <ul id="ul-class-navigation">
             <li>
 
-                <a href="cart.php" class="HrefDecoration"><i class="fas fa-shopping-cart"></i> Winkelwagen bekijken</a>
+                <a href="cart.php" class="HrefDecoration"><i class="fas fa-shopping-cart"></i> Winkelwagen</a>
 
                 <a href="browse.php" class="HrefDecoration"><i class="fas fa-search search"></i> Zoeken</a>
             </li>

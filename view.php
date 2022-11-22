@@ -104,7 +104,7 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
                         <h6> Inclusief BTW </h6>
                         <form method="post">
                             <br>
-                            <button class="btn btn-primary btn-lg btn-block" name="mand">Toevoegen aan winkelmand</button>
+                            <button class="btn btn-primary btn-lg btn-block" name="mand">In winkelmand</button>
 
                         </form>
                         <?php
