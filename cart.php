@@ -24,8 +24,8 @@ include "header.php";
         <th>Prijs</th>
         <th>Verwijder</th>
     </tr>
-    <p><?php space(); ?>
-    <a class="btn btn-danger" href="browse.php" role="button">X</a>
+    <p><?php echo "&nbsp;", "&nbsp;"; ?>
+    <a class="btn btn-secondary" href="browse.php" role="button">Terug naar artikelpagina</a>
     </p>
 
     <?php
