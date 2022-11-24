@@ -96,7 +96,7 @@ foreach($cart as $productid => $quantity){
 <h3>Totaal: <?php echo "€ ".round($totalprice,2);?></h3>
 <form action="./ordersuccess.php" method="post">
 
-    <button name="afrekenen" class="btn btn-success">Afrekenen</button>
+    <button name="afrekenen" class="btn btn-success">Bestellen</button>
 
 
 

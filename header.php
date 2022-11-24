@@ -70,6 +70,9 @@ $databaseConnection = connectToDatabase();
                 <a href="cart.php" class="HrefDecoration"><i class="fas fa-shopping-cart"></i> Winkelwagen</a>
 
                 <a href="browse.php" class="HrefDecoration"><i class="fas fa-search search"></i> Zoeken</a>
+
+                <a href="klantgegevens.php" class="HrefDecoration"><i class="fa-regular fa-truck-arrow-right"></i> Orders</a>
+
             </li>
         </ul>
 
