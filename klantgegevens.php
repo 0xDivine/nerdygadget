@@ -1,30 +1,50 @@
-<?php
+ <?php
 
 include "./header.php";
 include "afrekenfuncties.php";
+?>
+<div class="container-fluid">
 
-
-
+    <div class="row">
+        <div class="form-group col-md-4">
+            <h3>Klantennummer  </h3>
+        </div>
+        <div class="form-group col-md-4">
+            <h3>Naam  </h3>
+        </div>
+        <div class="form-group col-md-4">
+            <h3>Woonplaats  </h3>
+        </div>
+    </div>
+</div>
+<?php
 $connection = maakVerbinding();
 
-$b = selecteerKlanten($connection);
 
-foreach($b as $row){
-    $nummer =  $row["nummer"];
-    $naam =  $row["naam"];
-    $woonplaats = $row["woonplaats"];
-}
+ $gegevens = selecteerKlanten($connection);
+
+foreach($gegevens as $gegeven){
+
+    $nummer = $gegeven["nummer"];
+    $naam =  $gegeven["naam"];
+    $woonplaats = $gegeven["woonplaats"];
+
 
 ?>
+    <div class="container-fluid">
 
-<table>
-    <tr>
-        <th>Klantnummer</th>
-        <th>Naam</th>
-        <th>Woonplaats</th>
+     <div class="row">
+         <div class="form-group col-md-4">
+             <h4><?php echo $nummer; ?></h4>
+         </div>
+         <div class="form-group col-md-4">
+             <h4><?php echo $naam; ?></h4>
+         </div>
+         <div class="form-group col-md-4">
+             <h4><?php echo $woonplaats; ?></h4>
+         </div>
 
-    </tr>
-<td><?php echo $nummer; ?></td>
-    <td><?php echo $naam; ?></td>
-    <td><?php echo $woonplaats; ?></td>
-</table>
+     </div>
+    </div>
+
+ <?php } ?>

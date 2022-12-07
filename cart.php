@@ -14,7 +14,7 @@ include "header.php";
 <h1></h1>
 
 <br>
-
+<div class="container-fluid">
 <table>
     <tr>
         <th></th>
@@ -94,7 +94,7 @@ foreach($cart as $productid => $quantity){
  <?php #print_r($b); ?>
 
 <h3>Totaal: <?php echo "€ ".round($totalprice,2);?></h3>
-<form action="./ordersuccess.php" method="post">
+<form action="./gegevensinvullen.php" method="post">
 
     <button name="afrekenen" class="btn btn-success">Bestellen</button>
 
@@ -109,5 +109,6 @@ foreach($cart as $productid => $quantity){
 
 
 <p><a href='browse.php'>Terug naar artikelpagina</a></p>
+</div>
 </body>
 </html>
