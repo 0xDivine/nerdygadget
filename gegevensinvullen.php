@@ -1,7 +1,12 @@
 <?php
 
 include "header.php";
+include "cartfuncties.php";
+
+$b = korting();
+
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -76,6 +81,7 @@ include "header.php";
 
 
 </div>
+
 
 </body>
 </html>

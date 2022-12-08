@@ -104,10 +104,11 @@ foreach($cart as $productid => $quantity){
     <br>
     <form method="post">
     <div class="form-group col-md-3">
-        <input type="text" class="form-control" id="straatnaam" placeholder="Vul hier kortingscode in" >
+        <input type="text" class="form-control" id="kortingcodeform" placeholder="Vul hier kortingscode in" >
         <button type="submit" class="btn btn-primary" name="kortingsbutton">Toepassen</button>
     </div>
     </form>
+
 
 
     </div>

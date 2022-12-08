@@ -1,5 +1,4 @@
 <?php
-
 include "header.php";
 include "cartfuncties.php";
 include "afrekenfuncties.php";
@@ -7,18 +6,21 @@ include "afrekenfuncties.php";
 $cart = saveCart([]);
 
 
+
 ?>
 
 <h1>Bedankt voor je bestelling</h1>
-<p>Je hebt een kortingscoupon verkregen!</p>
+<p>Je bestelnummer is: <?php $b = generateOrderNumber(); echo $b; ?></p>
 
 <?php
 
-$a = 5;
-$b = 3;
+$_SESSION['action_count'] = $_SESSION['action_count'] + 1;
 
 
-if($b<$a){ ?>
+
+if($_SESSION['action_count'] < 2){ ?>
+        <br>
+    <script>alert('Je hebt een coupon code gekregen!')</script>
 
 <section id="labels">
     <div class="container">
@@ -39,7 +41,7 @@ if($b<$a){ ?>
                         <small>* Geld alleen op eerste bestelling</small>
                     </div>
                     <div class="coupon midnight-blue">
-                        <a data-toggle="collapse" href="#code-1" class="open-code">Get a code</a>
+                        <a data-toggle="collapse" href="#code-1" class="open-code">Genereer code</a>
                         <div id="code-1" class="collapse code"><?php $b = generateCouponCode(); echo $b; ?></div>
                     </div>
                 </div>
