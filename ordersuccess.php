@@ -2,6 +2,7 @@
 
 include "header.php";
 include "cartfuncties.php";
+include "afrekenfuncties.php";
 
 $cart = saveCart([]);
 
@@ -16,7 +17,8 @@ $cart = saveCart([]);
 $a = 5;
 $b = 3;
 
-if($a<$b){ ?>
+
+if($b<$a){ ?>
 
 <section id="labels">
     <div class="container">
@@ -38,7 +40,7 @@ if($a<$b){ ?>
                     </div>
                     <div class="coupon midnight-blue">
                         <a data-toggle="collapse" href="#code-1" class="open-code">Get a code</a>
-                        <div id="code-1" class="collapse code">NRMIF2FREE</div>
+                        <div id="code-1" class="collapse code"><?php $b = generateCouponCode(); echo $b; ?></div>
                     </div>
                 </div>
             </div>

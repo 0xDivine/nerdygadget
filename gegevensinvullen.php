@@ -16,7 +16,7 @@ include "header.php";
 <h1>Vul al je gegevens in!</h1>
 <!-- action="https://www.ideal.nl/demo/?screens=dskweb"-->
 <br>
-<form <?php isset($_POST) ?> action="redirectdemo.php" method="post">
+<form <?php isset($_POST) ?> action="ordersuccess.php" method="post">
 <!-- dit is de rij van voor en achternaam.-->
     <div class="form-row">
 
@@ -53,14 +53,30 @@ include "header.php";
         <div class="form-group col-md-3">
             <label for="postcode">Postcode:</label>
             <input type="text" class="form-control" name="postcode" placeholder="8756 HJ">
+
         </div>
 
     </div>
+    <h2>Betalingsmethode</h2>
+    <div class="form-group col-md-3">
+        <label for="betalingsmethode:"></label>
+        <select name="cars" id="cars">
+            <option value="volvo">iDEAL</option>
+            <option value="saab">PayPal</option>
+            <option value="opel"></option>
+            <option value="audi"></option>
+        </select>
+
+    </div>
+
+
     <button type="submit" class="btn btn-success">Afrekenen</button>
+
 </form>
 
 
 </div>
+
 </body>
 </html>
 
