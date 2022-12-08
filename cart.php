@@ -103,6 +103,7 @@ foreach($cart as $productid => $quantity){
 </form>
 
 <br>
+    <input type="text" class="checkout-promo-code-input" placeholder="Enter promo code" value="">
 <br>
 <br>
 
