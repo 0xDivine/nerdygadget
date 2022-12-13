@@ -162,15 +162,29 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
                             ?>
                         </td>
                     </tr>
-                <?php } ?>
+                <?php }
+
+                $fetchedid2 = $_GET["id"];
+
+                if($fetchedid2 == 138 || $fetchedid2 == 139 || $fetchedid2 == 140 || $fetchedid2 == 141){ ?>
+                        <th>Keurmerk</th>
+                        <td><img src="Public/ProductIMGHighRes/oeko.png" alt="Picture" style="width:150px;height:150px;"></td>
+
                 </table><?php
-            } else { ?>
+            }} else { ?>
 
                 <p><?php print $StockItem['CustomFields']; ?>.</p>
                 <?php
             }
             ?>
+            <?php
 
+            if($fetchedid2 == 150 || $fetchedid2 == 151 || $fetchedid2 == 152 || $fetchedid2 == 153){
+
+            ?>
+            <th>Keurmerk</th>
+            <td><img src="Public/ProductIMGHighRes/ce.png" alt="Picture" style="width:100px;height:100px;"></td>
+            <?php } ?>
         </div>
         <br>
         <br>
