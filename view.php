@@ -188,5 +188,4 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
         </div>
         <br>
         <br>
-
 </div>
