@@ -40,3 +40,21 @@ function space(){
 
 }
 
+function korting(){
+
+    if (!isset($_SESSION['action_count'])) {
+
+        $_SESSION['action_count'] = 0;
+    }
+}
+
+function generateOrderNumber() {
+    // Create a unique prefix for the order number
+    $prefix = date('ymd-') . substr(md5(time()), 0, 6);
+
+    // Generate a random number between 100000 and 999999
+    $randomNumber = mt_rand(100000, 999999);
+
+    // Return the unique order number
+    return $prefix . $randomNumber;
+}

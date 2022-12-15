@@ -29,7 +29,11 @@ include "header.php";
     </p>
 
     <?php
-$cart = getCart();
+
+
+
+
+    $cart = getCart();
 $totalprice = 0;
 
 
@@ -91,9 +95,28 @@ foreach($cart as $productid => $quantity){
 
 <?php } #$quantity = $quantity - 1; ?>
 </table>
- <?php #print_r($b); ?>
+ <?php if(isset($_POST["kortingsbutton"])) {
+     $totalprice = $totalprice - 5;
+ } ?>
+    <br>
+    <br>
+    <br>
+    <form method="post">
+    <div class="form-group col-md-3">
+        <input type="text" class="form-control" id="kortingcodeform" placeholder="Vul hier kortingscode in" >
+        <button type="submit" class="btn btn-primary" name="kortingsbutton">Toepassen</button>
+    </div>
+    </form>
+
+
+
+    </div>
+    <br>
+
+
 
 <h3>Totaal: <?php echo "€ ".round($totalprice,2);?></h3>
+
     <?php
 
     if (isset($_SESSION["klantid"]) && $_SESSION["klantid"]!=""){ ?>
@@ -111,12 +134,21 @@ foreach($cart as $productid => $quantity){
 
 
 <br>
+
+
 <br>
 <br>
 
 
+    <?php
+$couponCode = mt_rand(10000, 99999);?>
 
+
+    <br>
 <p><a href='browse.php'>Terug naar artikelpagina</a></p>
+
+
 </div>
+
 </body>
 </html>
