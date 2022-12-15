@@ -2,7 +2,6 @@
 include "header.php";
 include "cartfuncties.php";
 
-$b = korting();
 
 ?>
 <div class="container-fluid">

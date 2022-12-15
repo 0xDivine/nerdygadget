@@ -2,6 +2,14 @@
 include "cartfuncties.php";
 include "header.php";
 
+$countkorting = 1;
+
+if($countkorting < 2){
+    #print($countkorting);
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -34,8 +42,7 @@ include "header.php";
 
 
     $cart = getCart();
-$totalprice = 0;
-
+    $totalprice = 0;
 
 
 foreach($cart as $productid => $quantity){
@@ -96,8 +103,10 @@ foreach($cart as $productid => $quantity){
 <?php } #$quantity = $quantity - 1; ?>
 </table>
  <?php if(isset($_POST["kortingsbutton"])) {
-     $totalprice = $totalprice - 5;
- } ?>
+    $totalprice = $totalprice - 5;
+
+} ?>
+
     <br>
     <br>
     <br>
