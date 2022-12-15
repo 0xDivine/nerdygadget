@@ -8,7 +8,7 @@ function maakVerbinding() {
     $host = 'localhost';
     $user = 'root';
     $pass = '';
-    $databasename = "Klantenservice";
+    $databasename = "nerdygadgets";
     $connection = mysqli_connect($host, $user, $pass, $databasename);
     return $connection;
 }

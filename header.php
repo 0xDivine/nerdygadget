@@ -54,6 +54,7 @@ $databaseConnection = connectToDatabase();
                     <li>
                         <a href="browse.php?category_id=<?php print $HeaderStockGroup['StockGroupID']; ?>"
                            class="HrefDecoration"><?php print $HeaderStockGroup['StockGroupName']; ?></a>
+
                     </li>
                     <?php
                 }
@@ -66,6 +67,15 @@ $databaseConnection = connectToDatabase();
 <!-- code voor US3: zoeken -->
 <ul id="ul-class-navigation">
             <li>
+                <?php
+
+                if (isset($_SESSION["klantid"]) && $_SESSION["klantid"]!=""){ ?>
+                <a href="uitloggen.php" class="HrefDecoration">Uitloggen</a>
+
+                <?php } else{ ?>
+                <a href="login.php" class="HrefDecoration">Inloggen</a>
+
+                <?php } ?>
 
                 <a href="cart.php" class="HrefDecoration"><i class="fas fa-shopping-cart"></i> Winkelwagen</a>
 
@@ -75,7 +85,6 @@ $databaseConnection = connectToDatabase();
 
             </li>
         </ul>
-
 
 <!-- einde code voor US3 zoeken -->
     </div>

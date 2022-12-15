@@ -1,20 +1,8 @@
 <?php
-
 include "header.php";
 ?>
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
 <div class="container-fluid">
 <h1>Vul al je gegevens in!</h1>
-<!-- action="https://www.ideal.nl/demo/?screens=dskweb"-->
 <br>
 <form <?php isset($_POST) ?> action="redirectdemo.php" method="post">
 <!-- dit is de rij van voor en achternaam.-->
@@ -60,6 +48,10 @@ include "header.php";
 </form>
 
 
+
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>

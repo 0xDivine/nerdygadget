@@ -94,13 +94,21 @@ foreach($cart as $productid => $quantity){
  <?php #print_r($b); ?>
 
 <h3>Totaal: <?php echo "€ ".round($totalprice,2);?></h3>
-<form action="./gegevensinvullen.php" method="post">
+    <?php
 
-    <button name="afrekenen" class="btn btn-success">Bestellen</button>
+    if (isset($_SESSION["klantid"]) && $_SESSION["klantid"]!=""){ ?>
+        <form action="./ordersuccess.php" method="post">
+        <button name="afrekenen" class="btn btn-success">Bestellen</button>
+
+        </form>
+    <?php } else{ ?>
+        <form action="./gegevensinvullen.php" method="post">
+        <button name="afrekenen" class="btn btn-success">Bestellen</button>
+
+        </form>
+    <?php } ?>
 
 
-
-</form>
 
 <br>
 <br>
