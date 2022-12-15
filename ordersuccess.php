@@ -5,9 +5,6 @@ include "afrekenfuncties.php";
 
 $cart = saveCart([]);
 
-
-
-
 ?>
 
 <h1>Bedankt voor je bestelling</h1>
@@ -15,7 +12,7 @@ $cart = saveCart([]);
 
 <?php
 
-$_SESSION['action_count'] = $_SESSION['action_count'] + 1;
+$_SESSION['action_count']++;
 
 if($_SESSION['action_count'] < 2){ ?>
         <br>
@@ -79,5 +76,6 @@ if($_SESSION['action_count'] < 2){ ?>
     .dl .coupon .code{
                                                         letter - spacing:1px;border - radius:4px;margin - top:10px;padding:10px 15px;color:#f1c40f;background:#f0f0f0}
 </style >
-<?php } ?>
+<?php }
+?>
 <p><a href='browse.php'>Terug naar artikelpagina</a></p>
