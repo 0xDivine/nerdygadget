@@ -7,6 +7,7 @@ $cart = saveCart([]);
 
 
 
+
 ?>
 
 <h1>Bedankt voor je bestelling</h1>
@@ -15,8 +16,6 @@ $cart = saveCart([]);
 <?php
 
 $_SESSION['action_count'] = $_SESSION['action_count'] + 1;
-
-
 
 if($_SESSION['action_count'] < 2){ ?>
         <br>
@@ -42,7 +41,7 @@ if($_SESSION['action_count'] < 2){ ?>
                     </div>
                     <div class="coupon midnight-blue">
                         <a data-toggle="collapse" href="#code-1" class="open-code">Genereer code</a>
-                        <div id="code-1" class="collapse code"><?php $b = generateCouponCode(); echo $b; ?></div>
+                        <div id="code-1" class="collapse code"><?php $b = generateCouponCode(); echo $b; $_SESSION['code'] = TRUE; ?></div>
                     </div>
                 </div>
             </div>
@@ -81,3 +80,4 @@ if($_SESSION['action_count'] < 2){ ?>
                                                         letter - spacing:1px;border - radius:4px;margin - top:10px;padding:10px 15px;color:#f1c40f;background:#f0f0f0}
 </style >
 <?php } ?>
+<p><a href='browse.php'>Terug naar artikelpagina</a></p>

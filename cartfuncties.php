@@ -31,7 +31,7 @@ function addProductToCart($stockItemID)
 }
 
 function space(){
-    $var = "&nbsp;";
+    $var = "&nbssp;";
     for($x=0;$x<=150;$x++){
         print($var);
     }
