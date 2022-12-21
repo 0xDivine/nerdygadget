@@ -1,8 +1,7 @@
 <?php
 include "header.php";
 include "cartfuncties.php";
-
-$b = korting();
+$_SESSION['action_count'] = 0;
 
 ?>
 <div class="container-fluid">
