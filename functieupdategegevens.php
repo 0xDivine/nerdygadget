@@ -1,5 +1,7 @@
 <?php
+session_start();
 include "afrekenfuncties.php";
+$klantid = $_SESSION["klantid"];
 
 if (isset($_POST["voornaam"]) &&
     isset($_POST["achternaam"]) &&
@@ -15,18 +17,23 @@ if (isset($_POST["voornaam"]) &&
     $postcode = $_POST["postcode"];
 
     $connection = maakVerbinding();
-    $statement = "INSERT INTO nawgegevens (voornaam, achternaam, woonplaats, straatnaam, huisnummer, postcode) 
-    VALUES ('$voornaam','$achternaam','$woonplaats', '$straatnaam' , '$huisnummer', '$postcode')";
-    // $statement = "INSERT INTO klant (naam, woonplaats) VALUES (?,?)";
-//    mysqli_stmt_bind_param($statement, 'ss', $voornaam, $woonplaats);
-//    mysqli_stmt_execute($statement);
-    $result = mysqli_query($connection, $statement);
+    $query = "UPDATE klant SET voornaam = ?,
+        achternaam = ?,
+        woonplaats = ?,
+        straatnaam = ?,
+        huisnummer = ?,
+        postcode = ?
+    WHERE klantid = ?";
+    $statement = mysqli_prepare($connection, $query);
+    mysqli_stmt_bind_param($statement, 'ssssisi', $voornaam,$achternaam, $woonplaats,
+        $straatnaam, $huisnummer, $postcode, $klantid);
+    mysqli_stmt_execute($statement);
 
 
 }
 
-
 header('Location: ordersuccess.php');
 
 ?>
+
 

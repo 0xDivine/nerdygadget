@@ -120,7 +120,7 @@ foreach($cart as $productid => $quantity){
     <?php
 
     if (isset($_SESSION["klantid"]) && $_SESSION["klantid"]!=""){ ?>
-        <form action="./ordersuccess.php" method="post">
+        <form action="./gegevensinvullenaccount.php" method="post">
         <button name="afrekenen" class="btn btn-success">Bestellen</button>
 
         </form>

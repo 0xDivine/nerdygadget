@@ -8,7 +8,7 @@ $b = korting();
 <div class="container-fluid">
 <h1>Vul al je gegevens in!</h1>
 <br>
-<form <?php isset($_POST) ?> action="ordersuccess.php" method="post">
+<form <?php isset($_POST) ?> action="redirectdemo.php" method="post">
 <!-- dit is de rij van voor en achternaam.-->
     <div class="form-row">
 
@@ -18,7 +18,7 @@ $b = korting();
         </div>
         <div class="form-group col-md-3">
             <label for="achternaam">Achternaam:</label>
-            <input type="text" class="form-control" id="achternaam" placeholder="Kragt">
+            <input type="text" class="form-control" name="achternaam" placeholder="Kragt" required>
         </div>
     </div>
 
@@ -36,15 +36,15 @@ $b = korting();
 
     <div class="form-group col-md-3">
         <label for="straatnaam">Straatnaam:</label>
-        <input type="text" class="form-control" id="straatnaam" placeholder="Hartkamp" >
+        <input type="text" class="form-control" name="straatnaam" placeholder="Hartkamp" required>
     </div>
         <div class="form-group col-md-1">
             <label for="huisnummer">Huisnummer:</label>
-            <input type="text" class="form-control" id="Huisnummer" placeholder="13">
+            <input type="text" class="form-control" name="huisnummer" placeholder="13" required>
         </div>
         <div class="form-group col-md-3">
             <label for="postcode">Postcode:</label>
-            <input type="text" class="form-control" name="postcode" placeholder="8756 HJ">
+            <input type="text" class="form-control" name="postcode" placeholder="8756 HJ" required>
 
         </div>
 

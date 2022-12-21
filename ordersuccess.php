@@ -5,7 +5,7 @@ include "afrekenfuncties.php";
 
 $cart = saveCart([]);
 
-
+$_SESSION['action_count'] = 0;
 
 ?>
 
@@ -18,7 +18,7 @@ $_SESSION['action_count'] = $_SESSION['action_count'] + 1;
 
 
 
-if($_SESSION['action_count'] < 2){ ?>
+if($_SESSION['action_count'] < 1){ ?>
         <br>
     <script>alert('Je hebt een coupon code gekregen!')</script>
 

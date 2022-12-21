@@ -5,9 +5,6 @@ include "./header.php";
 <body>
 
 <div class="container">
-<!--    <span class="border border-warning">-->
-
-    <!-- action="https://www.ideal.nl/demo/?screens=dskweb"-->
     <br>
     <form <?php isset($_POST) ?> action="logincheck.php" method="post">
 
@@ -27,21 +24,6 @@ include "./header.php";
                 <input type="text" class="form-control" name="wachtwoord" placeholder="Kragt">
             </div>
         </div>
-
-        <!-- dit is de rij van email-->
-<!--        <div class="row justify-content-center">-->
-<!---->
-<!--            <div class="form-group col-md-3">-->
-<!--                <label for="voornaam">Voornaam:</label>-->
-<!--                <input type="text" class="form-control" name="voornaam" placeholder="Dylan" required>-->
-<!--            </div>-->
-<!--            <div class="form-group col-md-3">-->
-<!--                <label for="achternaam">Achternaam:</label>-->
-<!--                <input type="text" class="form-control" id="achternaam" placeholder="Kragt">-->
-<!--            </div>-->
-<!---->
-<!--        </div>-->
-
         <div class="row justify-content-center">
 
         <button type="submit" class="btn btn-success btn-lg">Log in</button>

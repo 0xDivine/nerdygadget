@@ -21,7 +21,7 @@ function alleKlantenOpvragen() {
 }
 
 function selecteerKlanten($connection) {
-    $sql = "SELECT nummer, naam, woonplaats FROM klant ORDER BY naam";
+    $sql = "SELECT voornaam, woonplaats FROM klant ORDER BY voornaam";
     $result = mysqli_fetch_all(mysqli_query($connection, $sql),MYSQLI_ASSOC);
     return $result;
 }
