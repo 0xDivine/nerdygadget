@@ -15,12 +15,12 @@ if (isset($_POST["voornaam"]) &&
     $postcode = $_POST["postcode"];
 
     $connection = maakVerbinding();
-    $statement = "INSERT INTO nawgegevens (voornaam, achternaam, woonplaats, straatnaam, huisnummer, postcode) 
-    VALUES ('$voornaam','$achternaam','$woonplaats', '$straatnaam' , '$huisnummer', '$postcode')";
-    // $statement = "INSERT INTO klant (naam, woonplaats) VALUES (?,?)";
-//    mysqli_stmt_bind_param($statement, 'ss', $voornaam, $woonplaats);
-//    mysqli_stmt_execute($statement);
-    $result = mysqli_query($connection, $statement);
+    $query = "INSERT INTO nawgegevens (voornaam, achternaam, woonplaats, straatnaam, huisnummer, postcode) 
+    VALUES (?,?,?,?,?,?)";
+    $statement = mysqli_prepare($connection, $query);
+    mysqli_stmt_bind_param($statement, 'ssssis', $voornaam, $achternaam, $woonplaats, $straatnaam, $huisnummer, $postcode);
+    mysqli_stmt_execute($statement);
+
 
 
 }

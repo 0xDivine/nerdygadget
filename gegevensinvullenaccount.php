@@ -2,6 +2,7 @@
 include "header.php";
 include "cartfuncties.php";
 include "functieaccount.php";
+$_SESSION['action_count'] = 0;
 $b = korting();
 $gegevens = klantgegevensopvragen();
 

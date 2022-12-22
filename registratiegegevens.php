@@ -23,12 +23,13 @@ if (isset($_POST["voornaam"]) &&
     $email = $_POST["email"];
 
     $connection = maakVerbinding();
-    $statement = "INSERT INTO klant (voornaam, woonplaats, achternaam, gebruikernaam, wachtwoord, telefoonnummer, straatnaam, postcode, huisnummer, email) 
-        VALUES ('$voornaam','$woonplaats','$achternaam','$gebruikersnaam','$wachtwoord','$telefoonnummer','$straatnaam','$postcode','$huisnummer','$email')";
-    // $statement = "INSERT INTO klant (naam, woonplaats) VALUES (?,?)";
-    //    mysqli_stmt_bind_param($statement, 'ss', $voornaam, $woonplaats);
-    //    mysqli_stmt_execute($statement);
-    $result = mysqli_query($connection, $statement);
+    $query = "INSERT INTO klant (voornaam, woonplaats, achternaam, gebruikernaam, wachtwoord, telefoonnummer, straatnaam, postcode, huisnummer, email) 
+        VALUES (?,?,?,?,?,?,?,?,?,?)";
+    $statement = mysqli_prepare($connection, $query);
+    mysqli_stmt_bind_param($statement, 'sssssissis', $voornaam, $woonplaats, $achternaam, $gebruikersnaam, $wachtwoord,
+        $telefoonnummer, $straatnaam, $postcode, $huisnummer, $email);
+    mysqli_stmt_execute($statement);
+
 
 }
 
